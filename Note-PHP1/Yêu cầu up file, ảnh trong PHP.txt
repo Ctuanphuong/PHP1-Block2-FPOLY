@@ -1,4 +1,0 @@
-+ Muốn upfile lên sv bắt buộc trong form phải có Method Post
-+ Thêm thuộc tính Enctype phải dc thiết lập là Multipart/form-data
-+ Input phải có Type = file
-+ Khi up file có lưu ý như sau: input type = file giống thẻ select, có giá trị Multiple chọn dc nhiều file
