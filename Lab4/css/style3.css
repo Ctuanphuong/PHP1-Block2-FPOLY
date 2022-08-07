@@ -1,0 +1,174 @@
+
+h1{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  table{
+    width:100%;
+    table-layout: fixed;
+  }
+  .tbl-header{
+    background-color: rgba(255,255,255,0.3);
+   }
+  .tbl-content{
+    overflow-x:auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+  th{
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  td{
+    padding: 15px;
+    text-align: left;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+  }
+  
+  
+  
+  
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+  body{
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: 'Roboto', sans-serif;
+  }
+  section{
+    margin: 50px;
+  }
+  
+  
+
+  .made-with-love {
+    margin-top: 40px;
+    padding: 10px;
+    clear: left;
+    text-align: center;
+    font-size: 10px;
+    font-family: arial;
+    color: #fff;
+  }
+  .made-with-love i {
+    font-style: normal;
+    color: #F50057;
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+  }
+  .made-with-love a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .made-with-love a:hover {
+    text-decoration: underline;
+  }
+  
+/* 
+  thêm sửa xóa */
+  .add-btn{ 
+    text-decoration: none; 
+    color: #ffff;
+    background-color: orange;
+    padding: 7px 40px;
+   border-radius: 5px;
+  }
+  .add-btn:hover{ 
+    background-color: rgb(193, 129, 9);
+  }
+
+  .edit-btn{ 
+    text-decoration: none; 
+    color: #ffff;
+    background-color: rgb(0, 94, 255);
+    padding: 5px 15px 5px 15px;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+  .edit-btn:hover{ 
+    background-color: rgb(10, 66, 161);
+  }
+
+  .remove-btn{ 
+    text-decoration: none; 
+    color: #ffff;
+    background-color: rgb(255, 0, 0);
+    padding: 5px 15px 5px 15px;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+  .remove-btn:hover{ 
+    background-color: rgb(196, 16, 16);
+  }
+/* 
+ Add */
+
+ .container-add{ 
+   display: flex;
+   justify-content: center;
+ }
+ .container-add p{ 
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+ }
+ 
+.container-add input[type=text] {
+    width: 200px;
+    outline: none;
+    border: 1px solid white;
+    height: 25px;
+}
+.container-add input[type=text]:focus {
+    width: 200px;
+    background: lightgray;
+    outline: none;
+
+}
+.container-add input[type=number] {
+    width: 200px;
+    outline: none;
+    border: 1px solid white;
+    height: 25px;
+}
+
+
+.container-add input[type=number]:focus {
+    width: 200px;
+    outline: none;
+    background: lightgray;
+}
+.container-add button {
+    width: 100px;
+    height: 30px;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    border: 1px solid orange;
+    margin: 20px 60px;
+}
+
+.container-add button:hover {
+    width: 100px;
+    height: 30px;
+    background: rgb(192, 110, 9);
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(192, 110, 9);
+    margin: 20px 60px;
+}
+.container-add textarea{ 
+    width: 205px;
+}

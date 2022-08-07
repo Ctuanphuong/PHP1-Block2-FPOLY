@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lab1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+</head>
+
+<body>
+    <form action="bai1_submit.php" method="get" class="formdk">
+        <h1>Form Đăng Ký Thông Tin</h1>
+        <div class="section">
+            <p>Họ tên:</p> <input type="text" name="hoten" class="ip"> <br>
+            <p>Mã số sinh viên:</p> <input type="text" name="masosinhvien" class="ip"> <br>
+            <div class="gt">Giới tính:
+                <input type="radio" name="gioitinh" value="Nam"> Nam
+                <input type="radio" name="gioitinh" value="Nữ"> Nữ
+            </div>
+            <p>Địa chỉ:</p> <input type="text" name="diachi" class="ip"> <br>
+            <br> Chuyên ngành:
+            <input list="cn" placeholder="Chọn chuyên ngành học" name="chuyennganh">
+            <datalist id="cn">
+                <option value="Thiết kế web"></option>
+                <option value="Lập trình mobile"></option>
+                <option value="Phát triên phần mềm"></option>
+                <option value="Thiết kế đồ họa"></option>
+            </datalist>
+        </div>
+        <div class="sent">
+            <button>Gửi</button>
+        </div>
+    </form>
+</body>
+
+</html>

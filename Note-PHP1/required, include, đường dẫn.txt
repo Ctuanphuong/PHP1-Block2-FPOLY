@@ -1,0 +1,10 @@
+- required: 
++ import các file xử lý logic (cần cảnh báo để biết có lỗi "warning"); 
++ required_once chỉ chấp nhận tồn tại 1 biến được khai báo, còn required có thể khai báo 1 biến giống hệt biến đã khai báo trước đó
+- include: 
++import các file hiển thị giao diện(ko hiển thị warning khi phát sinh lỗi);
+
+- Đường dẫn tuyệt đối là đường dẫn trỏ từ thư mục gốc đến các thư mục khác và đúng đến file được mở
+- Đường dẫn tương đối link 2 file 
++ ./ trỏ đến thư mục chứa file đang thực thi
++ ../ lùi ra ngoài 1 cấp so với thư mục chứa file đang thực thi 

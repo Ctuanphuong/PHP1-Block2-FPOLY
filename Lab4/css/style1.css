@@ -1,0 +1,162 @@
+
+
+.container-edit h1{ 
+    text-align: center;
+    color: darkorange;
+    font-family: tahoma;
+    padding-top: 20px;
+}
+.styled-table {
+border-collapse: collapse;
+margin: 25px auto;
+font-size: 0.9em;
+font-family: sans-serif;
+min-width: 400px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+background-color: #009879;
+color: #ffffff;
+text-align: left;
+}
+.styled-table th,
+.styled-table td {
+padding: 12px 15px;
+}
+.styled-table tbody tr {
+border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+font-weight: bold;
+color: #009879;
+}
+.add-th{ 
+color: white;
+text-decoration: none;
+background: #654F7B;
+padding: 5px 30px;
+border-radius: 10px; 
+font-weight: bold;
+border: 3px solid  #654F7B;
+margin-left: 3px;
+}
+.add-th:hover{ 
+color: white;
+background: #41214F;
+border: 3px solid  #41214F;
+transition:all 0.2s ease 0.2s;
+}
+.edit-btn{ 
+background: lightblue;
+padding: 5px 10px;
+border-radius: 10px;
+text-decoration: none;
+color: blue;
+margin-left: 5px;
+}
+.remove-btn{ 
+background: Crimson ;
+padding: 5px 10px;
+border-radius: 10px;
+text-decoration: none;
+color: white;
+
+}
+.edit-btn:hover{ 
+background: blue;
+padding: 5px 10px;
+border-radius: 10px;
+text-decoration: none;
+color: white;
+margin-left: 5px;
+transition:all 0.2s ease 0.2s;
+}
+.remove-btn:hover{ 
+background: red ;
+padding: 5px 10px;
+border-radius: 10px;
+text-decoration: none;
+color: white;
+transition:all 0.2s ease 0.2s;
+}
+/* CSS ADD STUDENT */
+.container-add {
+    width: 500px;
+    background-color: MediumSpringGreen;
+    margin: 0 auto;
+}
+
+.container-add h1 {
+    padding-top: 20px;
+    text-align: center;
+    color: orange;
+    font-weight: 900;
+
+}
+
+.container-add form {
+    margin: 20px 150px;
+}
+
+.container-add input[type=text] {
+    width: 200px;
+    outline: none;
+    border: 1px solid white;
+    height: 25px;
+}
+
+.container-add input[type=password] {
+    width: 200px;
+    outline: none;
+    border: 1px solid white;
+    height: 25px;
+}
+
+.container-add input[type=text]:focus {
+    width: 200px;
+    background: lightgray;
+    outline: none;
+
+}
+
+.container-add input[type=password]:focus {
+    width: 200px;
+    outline: none;
+    background: lightgray;
+}
+
+.container-add select {
+    border-radius: 10px;
+    width: 120px;
+    height: 20px;
+    margin-bottom: 17px;
+
+}
+
+.container-add button {
+    width: 80px;
+    height: 25px;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    border: 1px solid orange;
+    margin: 20px 60px;
+}
+
+.container-add button:hover {
+    width: 80px;
+    height: 25px;
+    background: darkorange;
+    color: white;
+    font-weight: bold;
+    border: 1px solid orange;
+    margin: 20px 60px;
+}

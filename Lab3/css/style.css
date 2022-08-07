@@ -1,0 +1,86 @@
+.container-add {
+    width: 500px;
+    background-color: rgb(0, 142, 231);
+    margin: 20px auto;
+  }
+  .container-add h1 {
+    padding-top: 20px;
+    text-align: center;
+    color: rgb(255, 252, 55);
+    font-weight: 900;
+  }
+  .container-add form {
+    margin: 20px 150px;
+  }
+  .container-add input {
+    width: 200px;
+    outline: none;
+    border: 1px solid white;
+    height: 25px;
+  }
+  .container-add input {
+    width: 200px;
+    outline: none;
+    border: 1px solid white;
+    height: 25px;
+  }
+  
+  .container-add input:focus {
+    width: 200px;
+    background: lightgray;
+    outline: none;
+  }
+  .container-add input:focus {
+    width: 200px;
+    outline: none;
+    background: lightgray;
+  }
+  .container-add select {
+    border-radius: 5px;
+    width: 120px;
+    height: 20px;
+   
+  }
+  .container-add button {
+    width: 80px;
+    height: 25px;
+    background: rgb(248, 244, 8);
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(255, 252, 55);
+    margin: 20px 60px;
+  }
+  .container-add button:hover {
+    width: 80px;
+    height: 25px;
+    background: rgb(231, 227, 20);
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(255, 252, 55);
+    margin: 20px 60px;
+  }
+  form p {
+    color: white;
+    font-weight: bold;
+  }
+  .register{ 
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+  }
+  .register a {
+text-decoration: none;
+color: rgb(249, 18, 18);
+font-weight: bold;
+  }
+  .container-add select{ 
+    width: 200px;
+    border-radius: none;
+    border: none;
+  }
+  .container-add input[type=file] { 
+    border: none;
+    color: white;
+   
+  }
+ 
