@@ -1,4 +1,18 @@
 <?php
+session_start();
+// cách sử dụng $_SESSION
+// 1. ở dòng đầu tiên của request thì cần gọi hàm session_start()
+// 2. để tạo mới 1 phần tử trong session thì đơn giản 
+// $_SESSION['ten_phan_tu'] = giatri;
+// 3. xóa 1 phần tử trong session: unset($_SESSION['ten_phan_tu']);
+// 4. xóa toàn bộ tất cả các session của website session_destroy();
+
+// để vào được trang a.php thì cần kiểm tra 
+// xem người dùng đã đăng nhập hay chưa
+if(!isset($_SESSION['auth']) || empty($_SESSION['auth'])){
+    header('location: login.php');
+    die;
+}
 //1. Tạo câu sql để lấy dữ liệu từ db
 $sqlQuery = "select * from users";
 // 2. Tạo kết nối từ php => mysql
@@ -20,6 +34,7 @@ $data = $stmt->fetchAll(); //Lấy về tất cả các bản ghi tìm được 
 // echo "<pre>";
 // var_dump($data);
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,6 +47,12 @@ $data = $stmt->fetchAll(); //Lấy về tất cả các bản ghi tìm được 
 </head>
 <body>
 <div class="container-edit">
+<?php
+    if(isset($_SESSION['auth'])): ?>
+<span>Chào, <?php echo $_SESSION['auth']['email'] ?></span>
+<?php endif ?>
+<a href="logout.php">Thoát</a> <br>
+Hiện có <?= count($data) ?> tài khoản trong database
 <h1>Danh sách sinh viên</h1>
     <table  class="styled-table">
         <thead>
@@ -62,7 +83,3 @@ $data = $stmt->fetchAll(); //Lấy về tất cả các bản ghi tìm được 
 </body>
 </html>
 
-
-
-
-    

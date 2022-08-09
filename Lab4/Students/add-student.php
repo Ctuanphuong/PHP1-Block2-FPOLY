@@ -27,6 +27,10 @@
                 <p>Avatar</p>
                 <input type="file" name="avatar">
             </div>
+         <div>
+            <p>Password</p>
+            <input type="password" name="password">
+         </div>
             <div>
                 <button type="submit">Xác nhận</button>
             </div>

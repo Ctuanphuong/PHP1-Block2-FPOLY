@@ -1,9 +1,15 @@
 <?php
 
-$sqlQuery = "select * from products";
+// $sqlQuery = "select * from products";
+$sqlQuery = "select p.*,c.name as category_name
+from products p join categories c on  p.category_id = c.id";
+
 $connect = new PDO("mysql:host=127.0.0.1;dbname=php1;charset=utf8", "root", "");
+
 $stmt = $connect->prepare($sqlQuery);
+
 $stmt -> execute();
+
 $data = $stmt -> fetchAll();
 // echo "<pre>"; 
 // var_dump($data);
@@ -30,10 +36,11 @@ $data = $stmt -> fetchAll();
         <tr>
           <th>Image</th>
           <th>Name</th>
+          <th>Category_id</th>
+          <th>Category_name</th>
           <th>Sku</th>
           <th>Price</th>
           <th>Quantity</th>
-          <th>Category_id</th>
           <th>Detail</th>
           
           <th><a class="add-btn" href="add-product.php">Add</a></th>
@@ -48,14 +55,15 @@ $data = $stmt -> fetchAll();
         <tr>
           <td><img src="<?= $value['image'] ?>" alt="product's image" style="width: 100px; height: 100px; border: 1px solid yellow;"></td>
           <td><?= $value['name']?></td>
+          <td><?= $value['category_id']?></td>
+          <td><?= $value['category_name']?></td>
           <td><?= $value['sku']?></td>
           <td><?= $value['price']?></td>
           <td><?= $value['quantity']?></td>
-          <td><?= $value['category_id']?></td>
           <td><?= $value['detail']?></td>
           <td class="btn-option">
                         <a class="edit-btn" href="edit-product.php?id=<?= $value['id'] ?>">Edit</a>
-                       <a onclick="Xóa không?" class="remove-btn" href="remove-product.php?id=<?= $value['id'] ?>">Delete</a>
+                       <a class="remove-btn" href="remove-product.php?id=<?= $value['id'] ?>">Delete</a>
                     </td>
         </tr>
         <?php endforeach ?>

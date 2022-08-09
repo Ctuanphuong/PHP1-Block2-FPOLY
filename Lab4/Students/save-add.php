@@ -5,7 +5,7 @@
 $name = $_POST['name'];
 $email = $_POST['email'];
 $avatar = $_FILES['avatar'];
-// $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 
 
@@ -13,7 +13,7 @@ $folder = strtolower("./uploads/" . uniqid() . '-' . $avatar['name']);
 move_uploaded_file($avatar["tmp_name"], $folder);
 
 //Xây dựng câu SQl để insert
-$insertQuery = "INSERT INTO users(name, email, avatar) VALUES ('$name','$email','$folder')";
+$insertQuery = "INSERT INTO users(name, email, avatar, password) VALUES ('$name', '$email', '$folder', '$password')";
 
 //Tạo kết nối & thực thi câu lệnh với db
 $connect = new PDO("mysql:host=127.0.0.1;dbname=php1;charset=utf8", "root", "");

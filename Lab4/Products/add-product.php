@@ -1,5 +1,17 @@
+<?php 
+// $id = $_GET['id'];
+
+$connect = new PDO("mysql:host=127.0.0.1;dbname=php1;charset=utf8", "root", "");
+
+$sqlCate = "select * from categories";
+$stmt1 = $connect->prepare($sqlCate);
+$stmt1->execute();
+$dataCate = $stmt1->fetchAll();
+
+?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,10 +20,11 @@
     <link rel='stylesheet' type='text/css' media='screen' href='../css/style3.css'>
     <script src='main.js'></script>
 </head>
+
 <body>
 
-        <h1>Add Product</h1>
-        <div class="container-add">
+    <h1>Add Product</h1>
+    <div class="container-add">
         <form action="save-add.php" method="post" enctype="multipart/form-data">
             <div>
                 <p>Product's name</p>
@@ -31,7 +44,15 @@
             </div>
             <div>
                 <p>Category ID</p>
-                <input type="number" name="category_id" placeholder="Enter category id...">
+                <!-- <input type="number" name="category_id" placeholder="Enter category id..."> -->
+                <select name="category_id" id="">
+                <option value="">Select product</option>
+                    <?php foreach ($dataCate as $category) : ?>
+                        <option value="<?= $category['id'] ?>">
+                        <?= $category['name'] ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
             </div>
             <div>
                 <p>Image</p>
@@ -47,7 +68,8 @@
         </form>
     </div>
 
-</form>
+    </form>
 
 </body>
+
 </html>
