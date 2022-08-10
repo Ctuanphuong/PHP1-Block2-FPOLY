@@ -14,7 +14,10 @@
         <form action="save-add.php" method="post">
             <div>
                 <p>Name</p>
-                <input type="text" name="name" placeholder="Enter category's name...">
+                <input type="text" name="name" placeholder="Enter category's name..."> <br>
+                <?php if(isset($_GET['nameerr'])):?>
+                <span style="color: red; font-size: 15px;"><?= $_GET['nameerr']?></span>
+            <?php endif ?>
             </div>
             <div>
                 <button type="submit">Add</button>

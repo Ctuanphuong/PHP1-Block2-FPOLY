@@ -15,8 +15,7 @@ move_uploaded_file($new_avatar["tmp_name"], $upimg);
 $sqlQuery = "update users set
 name='$name',
 email='$email',
-avatar='$upimg',
-password='$password'
+avatar='$upimg'
 where id='$id'
 ";
 

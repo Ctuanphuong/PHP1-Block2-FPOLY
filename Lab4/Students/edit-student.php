@@ -36,7 +36,7 @@ $data = $stmt->fetchAll();
 
 <body>
 <div class="container-add">
-<h1>Sửa thông tin sinh viên</h1>
+<h1>Edit User</h1>
         <form action="save-edit.php" method="post" enctype="multipart/form-data">
             <?php foreach ($data as $value) : ?>
                 <input type="hidden" name="id" value="<?= $id ?>">

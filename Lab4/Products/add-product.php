@@ -28,19 +28,31 @@ $dataCate = $stmt1->fetchAll();
         <form action="save-add.php" method="post" enctype="multipart/form-data">
             <div>
                 <p>Product's name</p>
-                <input type="text" name="name" placeholder="Enter product's name...">
+                <input type="text" name="name" placeholder="Enter product's name..."> <br>
+                <?php if(isset($_GET['nameerr'])):?>
+                <span style="color: red"><?= $_GET['nameerr']?></span>
+            <?php endif ?>
             </div>
             <div>
                 <p>Sku</p>
-                <input type="text" name="sku" placeholder="Enter sku...">
+                <input type="text" name="sku" placeholder="Enter sku..."> <br>
+                <?php if(isset($_GET['skuerr'])):?>
+                <span style="color: red"><?= $_GET['skuerr']?></span>
+            <?php endif ?>
             </div>
             <div>
                 <p>Price</p>
-                <input type="number" name="price" placeholder="Enter product's price...">
+                <input type="number" name="price" placeholder="Enter product's price..."> <br>
+                <?php if(isset($_GET['priceerr'])):?>
+                <span style="color: red"><?= $_GET['priceerr']?></span>
+            <?php endif ?>
             </div>
             <div>
                 <p>Quantity</p>
-                <input type="number" name="quantity" placeholder="Select quantity">
+                <input type="number" name="quantity" placeholder="Select quantity"> <br>
+                <?php if(isset($_GET['quantityerr'])):?>
+                <span style="color: red"><?= $_GET['quantityerr']?></span>
+            <?php endif ?>
             </div>
             <div>
                 <p>Category ID</p>
@@ -52,15 +64,24 @@ $dataCate = $stmt1->fetchAll();
                         <?= $category['name'] ?>
                         </option>
                     <?php endforeach; ?>
-                </select>
+                </select> <br>
+                <?php if(isset($_GET['category_iderr'])):?>
+                <span style="color: red"><?= $_GET['category_iderr']?></span>
+            <?php endif ?>
             </div>
             <div>
                 <p>Image</p>
-                <input type="file" name="image">
+                <input type="file" name="image"> <br>
+                <?php if(isset($_GET['imageerr'])):?>
+                <span style="color: red"><?= $_GET['imageerr'] ?></span> 
+            <?php endif ?>
             </div>
             <div>
                 <p>Detail</p>
-                <textarea id="detailprd" name="detail" rows="4" cols="50"></textarea>
+                <textarea id="detailprd" name="detail" rows="4" cols="50"></textarea> <br>
+                <?php if(isset($_GET['detailerr'])):?>
+                <span style="color: red"><?= $_GET['detailerr']?></span>
+            <?php endif ?>
             </div>
             <div>
                 <button type="submit">Add</button>
