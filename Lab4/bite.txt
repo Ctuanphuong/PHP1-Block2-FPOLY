@@ -1,0 +1,3 @@
+validate sku 
+select count(*) from products
+where sku = "bbb" and id != 2
