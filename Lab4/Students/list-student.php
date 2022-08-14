@@ -33,7 +33,6 @@ $data = $stmt->fetchAll(); //Lấy về tất cả các bản ghi tìm được 
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="../css/style1.css">
     <script src='main.js'></script>
-  
 </head>
 
 <body>
